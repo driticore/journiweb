@@ -698,7 +698,7 @@ export default function Home() {
       <CalendlyModal
         isOpen={isBookingOpen}
         onClose={() => setIsBookingOpen(false)}
-        calendlyUrl="https://calendly.com/your-username/demo"
+        calendlyUrl="https://calendly.com/akadinso-osuagwu/30min"
       />
     </main>
   )
