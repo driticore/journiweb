@@ -90,10 +90,7 @@ export default function Home() {
                 onClick={() => setIsBookingOpen(true)}
                 className="text-lg px-8 py-6 font-semibold border-2"
               >
-<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-<a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/akadinso-osuagwu/30min'});return false;">Book A Demo</a>
-<ArrowRight className="ml-2 h-5 w-5" />
+            Book a Demo <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </div>
           </div>
