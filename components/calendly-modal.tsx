@@ -21,7 +21,7 @@ declare global {
 export function CalendlyModal({
   isOpen,
   onClose,
-  calendlyUrl = "https://calendly.com/akadinso-osuagwu/30min",
+  calendlyUrl = "https://calendly.com/akadinso-osuagwu/30min?back=1&month=2026-01",
 }: CalendlyModalProps) {
   useEffect(() => {
     if (!isOpen) return
