@@ -349,9 +349,7 @@ export default function Home() {
                   <CardHeader>
                     <CardTitle className="text-2xl">{plan.name}</CardTitle>
                     <CardDescription className="text-base">{plan.description}</CardDescription>
-                    <div className="pt-4">
-                      <span className="text-foreground/60">/month</span>
-                    </div>
+
                   </CardHeader>
                   <CardContent className="space-y-6">
                     <ul className="space-y-3">
