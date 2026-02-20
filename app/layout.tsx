@@ -1,34 +1,26 @@
 import type React from "react"
 import type { Metadata } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
-import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
-import type { Metadata } from "next";
 
 const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
-
-
 export const metadata: Metadata = {
-  metadataBase: new URL("https://journiweb.com"),
-
   title: {
-    default: "JourniWeb | AI Lead Generation, Automation & Web Development",
+    default: "JourniWeb | AI Lead Generation & Automation in South Africa",
     template: "%s | JourniWeb",
   },
 
   description:
-    "Grow your business with AI-powered lead generation, smart automation, and high-converting websites. JourniWeb helps South African SMMEs, contractors, and service businesses attract real clients and scale faster.",
+    "JourniWeb helps South African businesses get qualified leads on autopilot using AI chatbots, automated outreach, smart follow-ups, and high-converting websites.",
 
   keywords: [
-    "AI lead generation",
-    "web development South Africa",
-    "digital marketing agency",
+    "AI lead generation South Africa",
+    "web design South Africa",
     "automation for businesses",
+    "chatbot marketing",
     "lead generation agency",
-    "AI chatbots for business",
-    "SMME marketing South Africa",
     "JourniWeb",
   ],
 
@@ -36,53 +28,35 @@ export const metadata: Metadata = {
   creator: "JourniWeb",
   publisher: "JourniWeb",
 
+  metadataBase: new URL("https://journiweb.co.za"),
+
   openGraph: {
     title: "JourniWeb | AI Lead Generation & Automation",
     description:
-      "Attract real clients with AI lead generation, automation, and high-converting websites built for South African businesses.",
-    url: "https://journiweb.com",
+      "Get more clients automatically with AI chatbots, automated follow-ups, and high-converting websites built for South African businesses.",
+    url: "https://journiweb.co.za",
     siteName: "JourniWeb",
     locale: "en_ZA",
     type: "website",
-    images: [
-      {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "JourniWeb AI Lead Generation & Web Development",
-      },
-    ],
   },
 
   twitter: {
     card: "summary_large_image",
     title: "JourniWeb | AI Lead Generation & Automation",
     description:
-      "Scale faster with AI-powered lead generation, automation, and modern websites from JourniWeb.",
-    images: ["/og-image.jpg"],
-  },
-
-  icons: {
-    icon: [
-      { url: "/icon-light-32x32.png", media: "(prefers-color-scheme: light)" },
-      { url: "/icon-dark-32x32.png", media: "(prefers-color-scheme: dark)" },
-      { url: "/icon.png", type: "image/png" },
-    ],
-    apple: "/apple-icon.png",
+      "AI systems that bring you real clients on autopilot. Built for South African businesses.",
   },
 
   robots: {
     index: true,
     follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
   },
-};
+
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
+}
 
 
 export default function RootLayout({
@@ -94,7 +68,6 @@ export default function RootLayout({
     <html lang="en">
       <body className={`font-sans antialiased`}>
         {children}
-        <Analytics />
       </body>
     </html>
   )
