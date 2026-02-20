@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import { useState } from "react"
-import Link from "next/link"
-import Image from "next/image"
+import { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
 import {
   ArrowRight,
   CheckCircle2,
@@ -19,13 +19,19 @@ import {
   Smartphone,
   Laptop,
   Building,
-} from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { CalendlyModal } from "@/components/calendly-modal"
+} from "lucide-react";
+import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { CalendlyModal } from "@/components/calendly-modal";
 
 export default function Home() {
-  const [isBookingOpen, setIsBookingOpen] = useState(false)
+  const [isBookingOpen, setIsBookingOpen] = useState(false);
 
   return (
     <main className="min-h-screen bg-background">
@@ -33,23 +39,44 @@ export default function Home() {
       <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-lg border-b border-border/40 z-50">
         <div className="container mx-auto px-4 py-4 flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <Image src="/logo.png" alt="JourniWeb Logo" width={180} height={40} className="h-8 w-auto" />
+            <Image
+              src="/logo.png"
+              alt="JourniWeb Logo"
+              width={180}
+              height={40}
+              className="h-8 w-auto"
+            />
           </div>
           <div className="hidden md:flex items-center gap-8">
-            <Link href="#services" className="text-sm font-medium hover:text-primary transition-colors">
+            <Link
+              href="#services"
+              className="text-sm font-medium hover:text-primary transition-colors"
+            >
               Services
             </Link>
-            <Link href="#how-it-works" className="text-sm font-medium hover:text-primary transition-colors">
+            <Link
+              href="#how-it-works"
+              className="text-sm font-medium hover:text-primary transition-colors"
+            >
               How It Works
             </Link>
-            <Link href="#pricing" className="text-sm font-medium hover:text-primary transition-colors">
+            <Link
+              href="#pricing"
+              className="text-sm font-medium hover:text-primary transition-colors"
+            >
               Pricing
             </Link>
-            <Link href="#testimonials" className="text-sm font-medium hover:text-primary transition-colors">
+            <Link
+              href="#testimonials"
+              className="text-sm font-medium hover:text-primary transition-colors"
+            >
               Testimonials
             </Link>
           </div>
-          <Button onClick={() => setIsBookingOpen(true)} className="font-semibold">
+          <Button
+            onClick={() => setIsBookingOpen(true)}
+            className="font-semibold"
+          >
             Book a Demo <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
         </div>
@@ -74,8 +101,8 @@ export default function Home() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-foreground/70 max-w-3xl mx-auto leading-relaxed">
-              JourniWeb builds stunning websites, automates your business workflows, and implements AI solutions that
-              help you grow faster.
+              JourniWeb builds stunning websites, automates your business
+              workflows, and implements AI solutions that help you grow faster.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
               <Button
@@ -91,7 +118,7 @@ export default function Home() {
                 onClick={() => setIsBookingOpen(true)}
                 className="text-lg px-8 py-6 font-semibold border-2"
               >
-            Book a Demo <ArrowRight className="ml-2 h-4 w-4" />
+                Book a Demo <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </div>
           </div>
@@ -102,7 +129,9 @@ export default function Home() {
       <section id="how-it-works" className="py-20 px-4">
         <div className="container mx-auto">
           <div className="text-center space-y-4 mb-16 animate-in fade-in slide-in-from-bottom-4 duration-700">
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight">How We Work</h2>
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+              How We Work
+            </h2>
             <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
               Four simple steps to transform your digital presence
             </p>
@@ -112,28 +141,32 @@ export default function Home() {
               {
                 step: 1,
                 title: "Discovery & Planning",
-                description: "We understand your business goals and create a custom strategy for your success",
+                description:
+                  "We understand your business goals and create a custom strategy for your success",
                 icon: MessageSquare,
                 delay: 100,
               },
               {
                 step: 2,
                 title: "Design & Development",
-                description: "Our team builds your website or automation solution with modern technologies",
+                description:
+                  "Our team builds your website or automation solution with modern technologies",
                 icon: Code,
                 delay: 200,
               },
               {
                 step: 3,
                 title: "Testing & Launch",
-                description: "We rigorously test everything and launch your project with full support",
+                description:
+                  "We rigorously test everything and launch your project with full support",
                 icon: Workflow,
                 delay: 300,
               },
               {
                 step: 4,
                 title: "Growth & Optimization",
-                description: "Ongoing support, updates, and optimization to maximize your results",
+                description:
+                  "Ongoing support, updates, and optimization to maximize your results",
                 icon: BarChart3,
                 delay: 400,
               },
@@ -153,7 +186,9 @@ export default function Home() {
                   <CardTitle className="text-xl">{title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-base leading-relaxed">{description}</CardDescription>
+                  <CardDescription className="text-base leading-relaxed">
+                    {description}
+                  </CardDescription>
                 </CardContent>
               </Card>
             ))}
@@ -165,55 +200,58 @@ export default function Home() {
       <section id="services" className="py-20 px-4 bg-muted/30">
         <div className="container mx-auto">
           <div className="text-center space-y-4 mb-16 animate-in fade-in slide-in-from-bottom-4 duration-700">
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight">Our Services</h2>
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+              Our Services
+            </h2>
             <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
-              Full-service web agency offering development, automation, and AI solutions
+              Full-service web agency offering development, automation, and AI
+              solutions
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {[
               {
-  title: "Website Development",
-  description:
-    "Premium, conversion-focused websites and landing pages engineered for speed, SEO dominance, and measurable growth.",
-  icon: Globe,
-},
-{
-  title: "Business Automation",
-  description:
-    "Advanced automation systems that eliminate manual tasks, optimize workflows, and turn your business into a scalable machine.",
-  icon: Workflow,
-},
-{
-  title: "AI Lead Generation",
-  description:
-    "Intelligent AI-powered chatbots and funnels that capture, qualify, and book high-value clients for you 24/7.",
-  icon: Bot,
-},
-{
-  title: "E-commerce Solutions",
-  description:
-    "Enterprise-ready online stores with secure payments, inventory control, and seamless customer experiences.",
-  icon: Laptop,
-},
-{
-  title: "Mobile-Responsive Design",
-  description:
-    "Strategically designed, mobile-first experiences that perform flawlessly across all devices.",
-  icon: Smartphone,
-},
-{
-  title: "Meta Ads Management",
-  description:
-    "Strategic, data-driven Meta ad campaigns built to generate consistent qualified leads and maximize ROI.",
-  icon: TrendingUp,
-},
-{
-  title: "Business Registration & SMME Support",
-  description:
-    "Complete company registration and digital setup services to launch, structure, and position your business for long-term success.",
-  icon: Building,
-},
+                title: "Website Development",
+                description:
+                  "Premium, conversion-focused websites and landing pages engineered for speed, SEO dominance, and measurable growth.",
+                icon: Globe,
+              },
+              {
+                title: "Business Automation",
+                description:
+                  "Advanced automation systems that eliminate manual tasks, optimize workflows, and turn your business into a scalable machine.",
+                icon: Workflow,
+              },
+              {
+                title: "AI Lead Generation",
+                description:
+                  "Intelligent AI-powered chatbots and funnels that capture, qualify, and book high-value clients for you 24/7.",
+                icon: Bot,
+              },
+              {
+                title: "E-commerce Solutions",
+                description:
+                  "Enterprise-ready online stores with secure payments, inventory control, and seamless customer experiences.",
+                icon: Laptop,
+              },
+              {
+                title: "Mobile-Responsive Design",
+                description:
+                  "Strategically designed, mobile-first experiences that perform flawlessly across all devices.",
+                icon: Smartphone,
+              },
+              {
+                title: "Meta Ads Management",
+                description:
+                  "Strategic, data-driven Meta ad campaigns built to generate consistent qualified leads and maximize ROI.",
+                icon: TrendingUp,
+              },
+              {
+                title: "Business Registration & SMME Support",
+                description:
+                  "Complete company registration and digital setup services to launch, structure, and position your business for long-term success.",
+                icon: Building,
+              },
             ].map((service, index) => (
               <Card
                 key={index}
@@ -227,7 +265,9 @@ export default function Home() {
                   <CardTitle className="text-xl">{service.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-base leading-relaxed">{service.description}</CardDescription>
+                  <CardDescription className="text-base leading-relaxed">
+                    {service.description}
+                  </CardDescription>
                 </CardContent>
               </Card>
             ))}
@@ -239,7 +279,9 @@ export default function Home() {
       <section className="py-20 px-4">
         <div className="container mx-auto">
           <div className="text-center space-y-4 mb-16 animate-in fade-in slide-in-from-bottom-4 duration-700">
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight">Why Choose JourniWeb</h2>
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+              Why Choose JourniWeb
+            </h2>
             <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
               Partner with a modern web agency that delivers results
             </p>
@@ -248,27 +290,33 @@ export default function Home() {
             {[
               {
                 title: "Modern Technology Stack",
-                description: "We use the latest frameworks and tools to build fast, secure, and scalable solutions",
+                description:
+                  "We use the latest frameworks and tools to build fast, secure, and scalable solutions",
               },
               {
                 title: "Affordable Pricing",
-                description: "Professional web services at prices that work for South African businesses",
+                description:
+                  "Professional web services at prices that work for South African businesses",
               },
               {
                 title: "Fast Turnaround",
-                description: "Get your project live quickly without compromising on quality or functionality",
+                description:
+                  "Get your project live quickly without compromising on quality or functionality",
               },
               {
                 title: "Ongoing Support",
-                description: "We're here after launch with maintenance, updates, and technical assistance",
+                description:
+                  "We're here after launch with maintenance, updates, and technical assistance",
               },
               {
                 title: "SEO Optimized",
-                description: "Every website is built with search engine optimization best practices from day one",
+                description:
+                  "Every website is built with search engine optimization best practices from day one",
               },
               {
                 title: "Mobile-First Design",
-                description: "All our solutions work beautifully on mobile, tablet, and desktop devices",
+                description:
+                  "All our solutions work beautifully on mobile, tablet, and desktop devices",
               },
             ].map((benefit, index) => (
               <div
@@ -279,7 +327,9 @@ export default function Home() {
                 <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
                 <div className="space-y-2">
                   <h3 className="font-semibold text-lg">{benefit.title}</h3>
-                  <p className="text-foreground/70 leading-relaxed">{benefit.description}</p>
+                  <p className="text-foreground/70 leading-relaxed">
+                    {benefit.description}
+                  </p>
                 </div>
               </div>
             ))}
@@ -291,7 +341,9 @@ export default function Home() {
       <section id="pricing" className="py-20 px-4">
         <div className="container mx-auto">
           <div className="text-center space-y-4 mb-16 animate-in fade-in slide-in-from-bottom-4 duration-700">
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight">Simple, Transparent Pricing</h2>
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+              Simple, Transparent Pricing
+            </h2>
             <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
               Choose the plan that fits your business needs
             </p>
@@ -299,7 +351,9 @@ export default function Home() {
 
           {/* AI Lead Generation Pricing Section */}
           <div className="mb-20">
-            <h3 className="text-3xl font-bold text-center mb-8 text-primary">AI Lead Generation</h3>
+            <h3 className="text-3xl font-bold text-center mb-12 text-primary">
+              AI Lead Generation
+            </h3>
             <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {[
                 {
@@ -359,11 +413,9 @@ export default function Home() {
                   )}
                   <CardHeader>
                     <CardTitle className="text-2xl">{plan.name}</CardTitle>
-                    <CardDescription className="text-base">{plan.description}</CardDescription>
-                    <div className="pt-4">
-                      <span className="text-4xl font-bold">{plan.price}</span>
-                      <span className="text-foreground/60">/month</span>
-                    </div>
+                    <CardDescription className="text-base">
+                      {plan.description}
+                    </CardDescription>
                   </CardHeader>
                   <CardContent className="space-y-6">
                     <ul className="space-y-3">
@@ -390,7 +442,9 @@ export default function Home() {
 
           {/* Web Development Pricing Section */}
           <div className="mb-20">
-            <h3 className="text-3xl font-bold text-center mb-8 text-primary">Web Development</h3>
+            <h3 className="text-3xl font-bold text-center mb-12 text-primary">
+              Web Development
+            </h3>
             <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {[
                 {
@@ -451,11 +505,10 @@ export default function Home() {
                   )}
                   <CardHeader>
                     <CardTitle className="text-2xl">{plan.name}</CardTitle>
-                    <CardDescription className="text-base">{plan.description}</CardDescription>
-                    <div className="pt-4">
-                      <span className="text-4xl font-bold">{plan.price}</span>
-                      <span className="text-foreground/60 text-sm"> one-time</span>
-                    </div>
+                    <CardDescription className="text-base">
+                      {plan.description}
+                    </CardDescription>
+
                   </CardHeader>
                   <CardContent className="space-y-6">
                     <ul className="space-y-3">
@@ -482,7 +535,9 @@ export default function Home() {
 
           {/* Business Automation Pricing Section */}
           <div>
-            <h3 className="text-3xl font-bold text-center mb-8 text-primary">Business Automation</h3>
+            <h3 className="text-3xl font-bold text-center mb-12 text-primary">
+              Business Automation
+            </h3>
             <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {[
                 {
@@ -543,11 +598,10 @@ export default function Home() {
                   )}
                   <CardHeader>
                     <CardTitle className="text-2xl">{plan.name}</CardTitle>
-                    <CardDescription className="text-base">{plan.description}</CardDescription>
-                    <div className="pt-4">
-                      <span className="text-4xl font-bold">{plan.price}</span>
-                      <span className="text-foreground/60 text-sm"> one-time</span>
-                    </div>
+                    <CardDescription className="text-base">
+                      {plan.description}
+                    </CardDescription>
+
                   </CardHeader>
                   <CardContent className="space-y-6">
                     <ul className="space-y-3">
@@ -573,101 +627,105 @@ export default function Home() {
           </div>
 
           {/* SMME & Business Compliance Support Pricing Section */}
-<div className="mb-20">
-  <h3 className="text-3xl font-bold text-center mb-8 text-primary">SMME & Business Support</h3>
-  <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-    {[
-      {
-        name: "Starter",
-        price: "R4,999",
-        description: "For new SMMEs setting up legally and digitally",
-        features: [
-          "Company registration guidance (CIPC)",
-          "CSD registration assistance",
-          "Basic BBBEE guidance",
-          "Google Business Profile & email setup",
-          "Contact & WhatsApp integration",
-          "1 month support via email/WhatsApp",
-          "Monthly reporting on setup progress",
-        ],
-        highlighted: false,
-      },
-      {
-        name: "Growth",
-        price: "R9,999",
-        description: "For growing SMMEs scaling operations compliantly",
-        features: [
-          "Full company registration & CIPC setup",
-          "CSD registration completed",
-          "BBBEE verification guidance",
-          "Tax registration & compliance support (SARS)",
-          "Workflow & CRM integration",
-          "Priority support via WhatsApp & email",
-          "Weekly reporting on progress",
-          "Branding & marketing setup",
-        ],
-        highlighted: true,
-      },
-      {
-        name: "Scale",
-        price: "R19,999",
-        description: "Enterprise-grade SMME setup with compliance & automation",
-        features: [
-          "Complete company registration & advanced CIPC support",
-          "CSD registration & active supplier management",
-          "BBBEE verification and score optimization",
-          "SARS tax registration and compliance guidance",
-          "Full workflow automation & CRM integration",
-          "Dedicated account manager",
-          "Real-time dashboards & reporting",
-          "Marketing, lead generation & digital presence setup",
-          "White-label options & API integrations",
-        ],
-        highlighted: false,
-      },
-    ].map((plan, index) => (
-      <Card
-        key={index}
-        className={`relative hover:shadow-xl transition-all animate-in fade-in slide-in-from-bottom-4 ${
-          plan.highlighted ? "border-primary border-4 shadow-lg scale-105" : "border-2"
-        }`}
-        style={{ animationDelay: `${index * 150}ms` }}
-      >
-        {plan.highlighted && (
-          <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-primary text-primary-foreground text-sm font-semibold rounded-full">
-            Most Popular
+          <div className="mt-20">
+            <h3 className="text-3xl font-bold text-center mb-12 text-primary">
+              SMME & Business Support
+            </h3>
+            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              {[
+                {
+                  name: "Starter",
+                  price: "R4,999",
+                  description: "For new SMMEs setting up legally and digitally",
+                  features: [
+                    "Company registration guidance (CIPC)",
+                    "CSD registration assistance",
+                    "Basic BBBEE guidance",
+                    "Google Business Profile & email setup",
+                    "Contact & WhatsApp integration",
+                    "1 month support via email/WhatsApp",
+                    "Monthly reporting on setup progress",
+                  ],
+                  highlighted: false,
+                },
+                {
+                  name: "Growth",
+                  price: "R9,999",
+                  description:
+                    "For growing SMMEs scaling operations compliantly",
+                  features: [
+                    "Full company registration & CIPC setup",
+                    "CSD registration completed",
+                    "BBBEE verification guidance",
+                    "Tax registration & compliance support (SARS)",
+                    "Workflow & CRM integration",
+                    "Priority support via WhatsApp & email",
+                    "Weekly reporting on progress",
+                    "Branding & marketing setup",
+                  ],
+                  highlighted: true,
+                },
+                {
+                  name: "Scale",
+                  price: "R19,999",
+                  description:
+                    "Enterprise-grade SMME setup with compliance & automation",
+                  features: [
+                    "Complete company registration & advanced CIPC support",
+                    "CSD registration & active supplier management",
+                    "BBBEE verification and score optimization",
+                    "SARS tax registration and compliance guidance",
+                    "Full workflow automation & CRM integration",
+                    "Dedicated account manager",
+                    "Real-time dashboards & reporting",
+                    "Marketing, lead generation & digital presence setup",
+                    "White-label options & API integrations",
+                  ],
+                  highlighted: false,
+                },
+              ].map((plan, index) => (
+                <Card
+                  key={index}
+                  className={`relative hover:shadow-xl transition-all animate-in fade-in slide-in-from-bottom-4 ${
+                    plan.highlighted
+                      ? "border-primary border-4 shadow-lg scale-105"
+                      : "border-2"
+                  }`}
+                  style={{ animationDelay: `${index * 150}ms` }}
+                >
+                  {plan.highlighted && (
+                    <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-primary text-primary-foreground text-sm font-semibold rounded-full">
+                      Most Popular
+                    </div>
+                  )}
+                  <CardHeader>
+                    <CardTitle className="text-2xl">{plan.name}</CardTitle>
+                    <CardDescription className="text-base">
+                      {plan.description}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-6">
+                    <ul className="space-y-3">
+                      {plan.features.map((feature, i) => (
+                        <li key={i} className="flex items-start gap-3">
+                          <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                          <span className="text-foreground/80">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <Button
+                      onClick={() => setIsBookingOpen(true)}
+                      className="w-full font-semibold"
+                      variant={plan.highlighted ? "default" : "outline"}
+                      size="lg"
+                    >
+                      Get Started <ChevronRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
-        )}
-        <CardHeader>
-          <CardTitle className="text-2xl">{plan.name}</CardTitle>
-          <CardDescription className="text-base">{plan.description}</CardDescription>
-          <div className="pt-4">
-            <span className="text-4xl font-bold">{plan.price}</span>
-            <span className="text-foreground/60 text-sm"> one-time</span>
-          </div>
-        </CardHeader>
-        <CardContent className="space-y-6">
-          <ul className="space-y-3">
-            {plan.features.map((feature, i) => (
-              <li key={i} className="flex items-start gap-3">
-                <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                <span className="text-foreground/80">{feature}</span>
-              </li>
-            ))}
-          </ul>
-          <Button
-            onClick={() => setIsBookingOpen(true)}
-            className="w-full font-semibold"
-            variant={plan.highlighted ? "default" : "outline"}
-            size="lg"
-          >
-            Get Started <ChevronRight className="ml-2 h-4 w-4" />
-          </Button>
-        </CardContent>
-      </Card>
-    ))}
-  </div>
-</div>
         </div>
       </section>
 
@@ -676,10 +734,12 @@ export default function Home() {
         <div className="container mx-auto">
           <Card className="max-w-4xl mx-auto border-2 shadow-xl">
             <CardContent className="p-12 text-center space-y-6">
-              <h2 className="text-4xl md:text-5xl font-bold tracking-tight">Ready to 10x Your Lead Generation?</h2>
+              <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+                Ready to 10x Your Lead Generation?
+              </h2>
               <p className="text-xl text-foreground/70 max-w-2xl mx-auto leading-relaxed">
-                Join hundreds of businesses using AI to generate more qualified leads, close deals faster, and grow
-                predictably.
+                Join hundreds of businesses using AI to generate more qualified
+                leads, close deals faster, and grow predictably.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
                 <Button
@@ -700,7 +760,13 @@ export default function Home() {
         <div className="container mx-auto">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div className="space-y-4">
-              <Image src="/logo.png" alt="JourniWeb Logo" width={180} height={40} className="h-8 w-auto" />
+              <Image
+                src="/logo.png"
+                alt="JourniWeb Logo"
+                width={180}
+                height={40}
+                className="h-8 w-auto"
+              />
               <p className="text-sm text-foreground/60 leading-relaxed">
                 AI-powered lead generation and automation for modern businesses.
               </p>
@@ -709,32 +775,50 @@ export default function Home() {
               <h3 className="font-semibold mb-4">Services</h3>
               <ul className="space-y-2 text-sm text-foreground/60">
                 <li>
-                  <Link href="#services" className="hover:text-foreground transition-colors">
+                  <Link
+                    href="#services"
+                    className="hover:text-foreground transition-colors"
+                  >
                     Website Development
                   </Link>
                 </li>
                 <li>
-                  <Link href="#services" className="hover:text-foreground transition-colors">
+                  <Link
+                    href="#services"
+                    className="hover:text-foreground transition-colors"
+                  >
                     Business Automation
                   </Link>
                 </li>
                 <li>
-                  <Link href="#services" className="hover:text-foreground transition-colors">
+                  <Link
+                    href="#services"
+                    className="hover:text-foreground transition-colors"
+                  >
                     AI Lead Generation
                   </Link>
                 </li>
                 <li>
-                  <Link href="#services" className="hover:text-foreground transition-colors">
+                  <Link
+                    href="#services"
+                    className="hover:text-foreground transition-colors"
+                  >
                     E-commerce Solutions
                   </Link>
                 </li>
                 <li>
-                  <Link href="#services" className="hover:text-foreground transition-colors">
+                  <Link
+                    href="#services"
+                    className="hover:text-foreground transition-colors"
+                  >
                     Mobile-Responsive Design
                   </Link>
                 </li>
                 <li>
-                  <Link href="#services" className="hover:text-foreground transition-colors">
+                  <Link
+                    href="#services"
+                    className="hover:text-foreground transition-colors"
+                  >
                     Meta Ads Management
                   </Link>
                 </li>
@@ -744,22 +828,34 @@ export default function Home() {
               <h3 className="font-semibold mb-4">Company</h3>
               <ul className="space-y-2 text-sm text-foreground/60">
                 <li>
-                  <Link href="#how-it-works" className="hover:text-foreground transition-colors">
+                  <Link
+                    href="#how-it-works"
+                    className="hover:text-foreground transition-colors"
+                  >
                     How It Works
                   </Link>
                 </li>
                 <li>
-                  <Link href="#pricing" className="hover:text-foreground transition-colors">
+                  <Link
+                    href="#pricing"
+                    className="hover:text-foreground transition-colors"
+                  >
                     Pricing
                   </Link>
                 </li>
                 <li>
-                  <Link href="#testimonials" className="hover:text-foreground transition-colors">
+                  <Link
+                    href="#testimonials"
+                    className="hover:text-foreground transition-colors"
+                  >
                     Testimonials
                   </Link>
                 </li>
                 <li>
-                  <button onClick={() => setIsBookingOpen(true)} className="hover:text-foreground transition-colors">
+                  <button
+                    onClick={() => setIsBookingOpen(true)}
+                    className="hover:text-foreground transition-colors"
+                  >
                     Book a Demo
                   </button>
                 </li>
@@ -771,13 +867,22 @@ export default function Home() {
                 <li>contact@journiweb.com</li>
                 <li>+1 (555) 123-4567</li>
                 <li className="flex gap-4 pt-2">
-                  <Link href="#" className="hover:text-foreground transition-colors">
+                  <Link
+                    href="#"
+                    className="hover:text-foreground transition-colors"
+                  >
                     LinkedIn
                   </Link>
-                  <Link href="#" className="hover:text-foreground transition-colors">
+                  <Link
+                    href="#"
+                    className="hover:text-foreground transition-colors"
+                  >
                     Twitter
                   </Link>
-                  <Link href="#" className="hover:text-foreground transition-colors">
+                  <Link
+                    href="#"
+                    className="hover:text-foreground transition-colors"
+                  >
                     Facebook
                   </Link>
                 </li>
@@ -786,12 +891,20 @@ export default function Home() {
           </div>
 
           <div className="border-t border-border/40 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-sm text-foreground/60">© 2025 JourniWeb. All rights reserved.</p>
+            <p className="text-sm text-foreground/60">
+              © 2025 JourniWeb. All rights reserved.
+            </p>
             <div className="flex gap-6 text-sm text-foreground/60">
-              <Link href="#" className="hover:text-foreground transition-colors">
+              <Link
+                href="#"
+                className="hover:text-foreground transition-colors"
+              >
                 Privacy Policy
               </Link>
-              <Link href="#" className="hover:text-foreground transition-colors">
+              <Link
+                href="#"
+                className="hover:text-foreground transition-colors"
+              >
                 Terms of Service
               </Link>
               <p>Powered by JourniWeb</p>
@@ -806,5 +919,5 @@ export default function Home() {
         calendlyUrl="https://calendly.com/akadinso-osuagwu/30min"
       />
     </main>
-  )
+  );
 }
