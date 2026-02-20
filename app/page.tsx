@@ -73,12 +73,12 @@ export default function Home() {
               Testimonials
             </Link>
           </div>
-          <Button
-            onClick={() => setIsBookingOpen(true)}
+          <a
+            href="zbooking.us/hIpOs"
             className="font-semibold"
           >
             Book a Demo <ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
+          </a>
         </div>
       </nav>
 
@@ -112,14 +112,12 @@ export default function Home() {
               >
                 Start Your Project <Zap className="ml-2 h-5 w-5" />
               </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                onClick={() => setIsBookingOpen(true)}
-                className="text-lg px-8 py-6 font-semibold border-2"
-              >
-                Book a Demo <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
+              <a
+            href="zbooking.us/hIpOs"
+            className="font-semibold"
+          >
+            Book a Demo <ArrowRight className="ml-2 h-4 w-4" />
+          </a>
             </div>
           </div>
         </div>
@@ -426,14 +424,14 @@ export default function Home() {
                         </li>
                       ))}
                     </ul>
-                    <Button
-                      onClick={() => setIsBookingOpen(true)}
+                    <a
+                      href="zbooking.us/hIpOs"
                       className="w-full font-semibold"
                       variant={plan.highlighted ? "default" : "outline"}
                       size="lg"
                     >
                       Get Started <ChevronRight className="ml-2 h-4 w-4" />
-                    </Button>
+                    </a>
                   </CardContent>
                 </Card>
               ))}
@@ -519,14 +517,14 @@ export default function Home() {
                         </li>
                       ))}
                     </ul>
-                    <Button
-                      onClick={() => setIsBookingOpen(true)}
+                    <a
+                      href="zbooking.us/hIpOs"
                       className="w-full font-semibold"
                       variant={plan.highlighted ? "default" : "outline"}
                       size="lg"
                     >
                       Get Started <ChevronRight className="ml-2 h-4 w-4" />
-                    </Button>
+                    </a>
                   </CardContent>
                 </Card>
               ))}
@@ -612,14 +610,14 @@ export default function Home() {
                         </li>
                       ))}
                     </ul>
-                    <Button
-                      onClick={() => setIsBookingOpen(true)}
+                    <a
+                      href="zbooking.us/hIpOs"
                       className="w-full font-semibold"
                       variant={plan.highlighted ? "default" : "outline"}
                       size="lg"
                     >
                       Get Started <ChevronRight className="ml-2 h-4 w-4" />
-                    </Button>
+                    </a>
                   </CardContent>
                 </Card>
               ))}
@@ -713,14 +711,14 @@ export default function Home() {
                         </li>
                       ))}
                     </ul>
-                    <Button
-                      onClick={() => setIsBookingOpen(true)}
+                    <a
+                      href="zbooking.us/hIpOs"
                       className="w-full font-semibold"
                       variant={plan.highlighted ? "default" : "outline"}
                       size="lg"
                     >
                       Get Started <ChevronRight className="ml-2 h-4 w-4" />
-                    </Button>
+                    </a>
                   </CardContent>
                 </Card>
               ))}
@@ -742,13 +740,13 @@ export default function Home() {
                 leads, close deals faster, and grow predictably.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-                <Button
+                <a
                   size="lg"
-                  onClick={() => setIsBookingOpen(true)}
+                  href="zbooking.us/hIpOs"
                   className="text-lg px-8 py-6 font-semibold shadow-lg hover:shadow-xl transition-all"
                 >
                   Book Your Demo <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
+                </a>
               </div>
             </CardContent>
           </Card>
@@ -852,12 +850,12 @@ export default function Home() {
                   </Link>
                 </li>
                 <li>
-                  <button
-                    onClick={() => setIsBookingOpen(true)}
+                  <a
+                    href="zbooking.us/hIpOs"
                     className="hover:text-foreground transition-colors"
                   >
                     Book a Demo
-                  </button>
+                  </a>
                 </li>
               </ul>
             </div>
@@ -895,12 +893,6 @@ export default function Home() {
           </div>
         </div>
       </footer>
-
-      <CalendlyModal
-        isOpen={isBookingOpen}
-        onClose={() => setIsBookingOpen(false)}
-        calendlyUrl="https://calendly.com/akadinso-osuagwu/30min"
-      />
     </main>
   );
 }
