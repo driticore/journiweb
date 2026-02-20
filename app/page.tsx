@@ -18,6 +18,7 @@ import {
   Code,
   Smartphone,
   Laptop,
+  Building,
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -172,37 +173,47 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             {[
               {
-                title: "Website Development",
-                description:
-                  "Custom websites and landing pages built with modern frameworks for speed, SEO, and conversions",
-                icon: Globe,
-              },
-              {
-                title: "Business Automation",
-                description:
-                  "Streamline operations with workflow automation, CRM integration, and process optimization",
-                icon: Workflow,
-              },
-              {
-                title: "AI Lead Generation",
-                description: "Intelligent chatbots and automated systems that qualify leads and book appointments 24/7",
-                icon: Bot,
-              },
-              {
-                title: "E-commerce Solutions",
-                description: "Complete online stores with payment processing, inventory management, and order tracking",
-                icon: Laptop,
-              },
-              {
-                title: "Mobile-Responsive Design",
-                description: "Beautiful designs that work flawlessly on all devices, from phones to desktops",
-                icon: Smartphone,
-              },
-              {
-                title: "Meta Ads Management",
-                description: "Strategic ad campaigns with AI-powered targeting to drive qualified traffic and leads",
-                icon: TrendingUp,
-              },
+  title: "Website Development",
+  description:
+    "Premium, conversion-focused websites and landing pages engineered for speed, SEO dominance, and measurable growth.",
+  icon: Globe,
+},
+{
+  title: "Business Automation",
+  description:
+    "Advanced automation systems that eliminate manual tasks, optimize workflows, and turn your business into a scalable machine.",
+  icon: Workflow,
+},
+{
+  title: "AI Lead Generation",
+  description:
+    "Intelligent AI-powered chatbots and funnels that capture, qualify, and book high-value clients for you 24/7.",
+  icon: Bot,
+},
+{
+  title: "E-commerce Solutions",
+  description:
+    "Enterprise-ready online stores with secure payments, inventory control, and seamless customer experiences.",
+  icon: Laptop,
+},
+{
+  title: "Mobile-Responsive Design",
+  description:
+    "Strategically designed, mobile-first experiences that perform flawlessly across all devices.",
+  icon: Smartphone,
+},
+{
+  title: "Meta Ads Management",
+  description:
+    "Strategic, data-driven Meta ad campaigns built to generate consistent qualified leads and maximize ROI.",
+  icon: TrendingUp,
+},
+{
+  title: "Business Registration & SMME Support",
+  description:
+    "Complete company registration and digital setup services to launch, structure, and position your business for long-term success.",
+  icon: Building,
+},
             ].map((service, index) => (
               <Card
                 key={index}
@@ -349,7 +360,10 @@ export default function Home() {
                   <CardHeader>
                     <CardTitle className="text-2xl">{plan.name}</CardTitle>
                     <CardDescription className="text-base">{plan.description}</CardDescription>
-
+                    <div className="pt-4">
+                      <span className="text-4xl font-bold">{plan.price}</span>
+                      <span className="text-foreground/60">/month</span>
+                    </div>
                   </CardHeader>
                   <CardContent className="space-y-6">
                     <ul className="space-y-3">
@@ -439,6 +453,7 @@ export default function Home() {
                     <CardTitle className="text-2xl">{plan.name}</CardTitle>
                     <CardDescription className="text-base">{plan.description}</CardDescription>
                     <div className="pt-4">
+                      <span className="text-4xl font-bold">{plan.price}</span>
                       <span className="text-foreground/60 text-sm"> one-time</span>
                     </div>
                   </CardHeader>
@@ -530,6 +545,7 @@ export default function Home() {
                     <CardTitle className="text-2xl">{plan.name}</CardTitle>
                     <CardDescription className="text-base">{plan.description}</CardDescription>
                     <div className="pt-4">
+                      <span className="text-4xl font-bold">{plan.price}</span>
                       <span className="text-foreground/60 text-sm"> one-time</span>
                     </div>
                   </CardHeader>
@@ -555,6 +571,103 @@ export default function Home() {
               ))}
             </div>
           </div>
+
+          {/* SMME & Business Compliance Support Pricing Section */}
+<div className="mb-20">
+  <h3 className="text-3xl font-bold text-center mb-8 text-primary">SMME & Business Support</h3>
+  <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+    {[
+      {
+        name: "Starter",
+        price: "R4,999",
+        description: "For new SMMEs setting up legally and digitally",
+        features: [
+          "Company registration guidance (CIPC)",
+          "CSD registration assistance",
+          "Basic BBBEE guidance",
+          "Google Business Profile & email setup",
+          "Contact & WhatsApp integration",
+          "1 month support via email/WhatsApp",
+          "Monthly reporting on setup progress",
+        ],
+        highlighted: false,
+      },
+      {
+        name: "Growth",
+        price: "R9,999",
+        description: "For growing SMMEs scaling operations compliantly",
+        features: [
+          "Full company registration & CIPC setup",
+          "CSD registration completed",
+          "BBBEE verification guidance",
+          "Tax registration & compliance support (SARS)",
+          "Workflow & CRM integration",
+          "Priority support via WhatsApp & email",
+          "Weekly reporting on progress",
+          "Branding & marketing setup",
+        ],
+        highlighted: true,
+      },
+      {
+        name: "Scale",
+        price: "R19,999",
+        description: "Enterprise-grade SMME setup with compliance & automation",
+        features: [
+          "Complete company registration & advanced CIPC support",
+          "CSD registration & active supplier management",
+          "BBBEE verification and score optimization",
+          "SARS tax registration and compliance guidance",
+          "Full workflow automation & CRM integration",
+          "Dedicated account manager",
+          "Real-time dashboards & reporting",
+          "Marketing, lead generation & digital presence setup",
+          "White-label options & API integrations",
+        ],
+        highlighted: false,
+      },
+    ].map((plan, index) => (
+      <Card
+        key={index}
+        className={`relative hover:shadow-xl transition-all animate-in fade-in slide-in-from-bottom-4 ${
+          plan.highlighted ? "border-primary border-4 shadow-lg scale-105" : "border-2"
+        }`}
+        style={{ animationDelay: `${index * 150}ms` }}
+      >
+        {plan.highlighted && (
+          <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-primary text-primary-foreground text-sm font-semibold rounded-full">
+            Most Popular
+          </div>
+        )}
+        <CardHeader>
+          <CardTitle className="text-2xl">{plan.name}</CardTitle>
+          <CardDescription className="text-base">{plan.description}</CardDescription>
+          <div className="pt-4">
+            <span className="text-4xl font-bold">{plan.price}</span>
+            <span className="text-foreground/60 text-sm"> one-time</span>
+          </div>
+        </CardHeader>
+        <CardContent className="space-y-6">
+          <ul className="space-y-3">
+            {plan.features.map((feature, i) => (
+              <li key={i} className="flex items-start gap-3">
+                <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                <span className="text-foreground/80">{feature}</span>
+              </li>
+            ))}
+          </ul>
+          <Button
+            onClick={() => setIsBookingOpen(true)}
+            className="w-full font-semibold"
+            variant={plan.highlighted ? "default" : "outline"}
+            size="lg"
+          >
+            Get Started <ChevronRight className="ml-2 h-4 w-4" />
+          </Button>
+        </CardContent>
+      </Card>
+    ))}
+  </div>
+</div>
         </div>
       </section>
 
@@ -656,12 +769,15 @@ export default function Home() {
               <h3 className="font-semibold mb-4">Contact</h3>
               <ul className="space-y-2 text-sm text-foreground/60">
                 <li>contact@journiweb.com</li>
-                <li>+(27) 71-081-1915</li>
+                <li>+1 (555) 123-4567</li>
                 <li className="flex gap-4 pt-2">
-                  <Link href="https://www.linkedin.com/in/journiweb-za-a5b80b3a9/" className="hover:text-foreground transition-colors">
+                  <Link href="#" className="hover:text-foreground transition-colors">
                     LinkedIn
                   </Link>
-                  <Link href="https://www.facebook.com/profile.php?id=61578639140595" className="hover:text-foreground transition-colors">
+                  <Link href="#" className="hover:text-foreground transition-colors">
+                    Twitter
+                  </Link>
+                  <Link href="#" className="hover:text-foreground transition-colors">
                     Facebook
                   </Link>
                 </li>
