@@ -318,22 +318,66 @@ export default function Home() {
         <div className="container mx-auto">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div className="space-y-4">
-              <Image
-                src="/logo.png"
-                alt="JourniWeb Logo"
-                width={180}
-                height={40}
-                className="h-8 w-auto"
-              />
+              <Image src="/logo.png" alt="JourniWeb Logo" width={180} height={40} className="h-8 w-auto" />
               <p className="text-sm text-foreground/60 leading-relaxed">
                 AI-powered lead generation and automation for modern businesses.
               </p>
             </div>
             <div>
+              <h3 className="font-semibold mb-4">Services</h3>
+              <ul className="space-y-2 text-sm text-foreground/60">
+                <li>
+                  <Link href="#services" className="hover:text-foreground transition-colors">
+                    Website Development
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#services" className="hover:text-foreground transition-colors">
+                    Business Automation
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#services" className="hover:text-foreground transition-colors">
+                    AI Lead Generation
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#services" className="hover:text-foreground transition-colors">
+                    E-commerce Solutions
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#services" className="hover:text-foreground transition-colors">
+                    Mobile-Responsive Design
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#services" className="hover:text-foreground transition-colors">
+                    Meta Ads Management
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div>
               <h3 className="font-semibold mb-4">Company</h3>
               <ul className="space-y-2 text-sm text-foreground/60">
                 <li>
-                  <Button
+                  <Link href="#how-it-works" className="hover:text-foreground transition-colors">
+                    How It Works
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#pricing" className="hover:text-foreground transition-colors">
+                    Pricing
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#testimonials" className="hover:text-foreground transition-colors">
+                    Testimonials
+                  </Link>
+                </li>
+                <li>
+                 <Button
                     asChild
                     size="sm"
                     className="px-4 py-2 bg-primary text-white hover:bg-primary/90 rounded-md w-full"
@@ -345,14 +389,39 @@ export default function Home() {
                 </li>
               </ul>
             </div>
+            <div>
+              <h3 className="font-semibold mb-4">Contact</h3>
+              <ul className="space-y-2 text-sm text-foreground/60">
+                <li>contact@journiweb.com</li>
+                <li>+27 (071) 081-1915</li>
+                <li className="flex gap-4 pt-2">
+                  <Link href="#" className="hover:text-foreground transition-colors">
+                    LinkedIn
+                  </Link>
+
+                  <Link href="#" className="hover:text-foreground transition-colors">
+                    Facebook
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
+
           <div className="border-t border-border/40 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-sm text-foreground/60">
-              © 2025 JourniWeb. All rights reserved.
-            </p>
+            <p className="text-sm text-foreground/60">© 2025 JourniWeb. All rights reserved.</p>
+            <div className="flex gap-6 text-sm text-foreground/60">
+              <Link href="#" className="hover:text-foreground transition-colors">
+                Privacy Policy
+              </Link>
+              <Link href="#" className="hover:text-foreground transition-colors">
+                Terms of Service
+              </Link>
+              <p>Powered by JourniWeb</p>
+            </div>
           </div>
         </div>
       </footer>
+      
     </main>
   );
 }
