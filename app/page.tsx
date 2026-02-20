@@ -864,23 +864,18 @@ export default function Home() {
             <div>
               <h3 className="font-semibold mb-4">Contact</h3>
               <ul className="space-y-2 text-sm text-foreground/60">
-                <li>contact@journiweb.com</li>
-                <li>+1 (555) 123-4567</li>
+                <li>contact@journiweb.co.za</li>
+                <li>+27 (071) 081-1915</li>
                 <li className="flex gap-4 pt-2">
                   <Link
-                    href="#"
+                    href="https://www.linkedin.com/in/journiweb-za-a5b80b3a9/"
                     className="hover:text-foreground transition-colors"
                   >
                     LinkedIn
                   </Link>
+
                   <Link
-                    href="#"
-                    className="hover:text-foreground transition-colors"
-                  >
-                    Twitter
-                  </Link>
-                  <Link
-                    href="#"
+                    href="https://www.facebook.com/profile.php?id=61578639140595"
                     className="hover:text-foreground transition-colors"
                   >
                     Facebook
@@ -895,18 +890,6 @@ export default function Home() {
               © 2025 JourniWeb. All rights reserved.
             </p>
             <div className="flex gap-6 text-sm text-foreground/60">
-              <Link
-                href="#"
-                className="hover:text-foreground transition-colors"
-              >
-                Privacy Policy
-              </Link>
-              <Link
-                href="#"
-                className="hover:text-foreground transition-colors"
-              >
-                Terms of Service
-              </Link>
               <p>Powered by JourniWeb</p>
             </div>
           </div>
