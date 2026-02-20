@@ -78,7 +78,7 @@ export default function Home() {
           <Button
             asChild
             size="sm"
-            className="px-4 py-2 bg-primary text-white hover:bg-primary/90 rounded-md"
+            className="px-4 py-2 bg-primary text-[#000000] hover:bg-primary/90 rounded-md"
           >
             <a href={bookingUrl} target="_blank" rel="noopener noreferrer">
               Book a Demo <ArrowRight className="ml-2 h-4 w-4 inline-block" />
@@ -121,7 +121,7 @@ export default function Home() {
               <Button
                 asChild
                 size="lg"
-                className="px-8 py-6 font-semibold shadow-lg hover:shadow-xl transition-all"
+                className="px-8 py-6 font-semibold text-[#000000] shadow-lg hover:shadow-xl transition-all"
               >
                 <a href={bookingUrl} target="_blank" rel="noopener noreferrer">
                   Book a Demo <ArrowRight className="ml-2 h-5 w-5 inline-block" />
@@ -392,14 +392,14 @@ export default function Home() {
             <div>
               <h3 className="font-semibold mb-4">Contact</h3>
               <ul className="space-y-2 text-sm text-foreground/60">
-                <li>contact@journiweb.com</li>
+                <li>contact@journiweb.co.za</li>
                 <li>+27 (071) 081-1915</li>
                 <li className="flex gap-4 pt-2">
-                  <Link href="#" className="hover:text-foreground transition-colors">
+                  <Link href="https://www.linkedin.com/in/journiweb-za-a5b80b3a9/" className="hover:text-foreground transition-colors">
                     LinkedIn
                   </Link>
 
-                  <Link href="#" className="hover:text-foreground transition-colors">
+                  <Link href="https://www.facebook.com/profile.php?id=61578639140595" className="hover:text-foreground transition-colors">
                     Facebook
                   </Link>
                 </li>
