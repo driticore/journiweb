@@ -283,7 +283,396 @@ export default function Home() {
       </section>
 
       {/* Pricing Section */}
-      {/* ... Similar conversion for all pricing sections using Button-wrapped links ... */}
+      <section id="pricing" className="py-20 px-4">
+        <div className="container mx-auto">
+          <div className="text-center space-y-4 mb-16 animate-in fade-in slide-in-from-bottom-4 duration-700">
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+              Simple, Transparent Pricing
+            </h2>
+            <p className="text-xl text-foreground/70 max-w-2xl mx-auto">
+              Choose the plan that fits your business needs
+            </p>
+          </div>
+
+          {/* AI Lead Generation Pricing Section */}
+          <div className="mb-20">
+            <h3 className="text-3xl font-bold text-center mb-12 text-primary">
+              AI Lead Generation
+            </h3>
+            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              {[
+                {
+                  name: "Starter",
+                  price: "R4,999",
+                  description: "Perfect for small businesses getting started",
+                  features: [
+                    "AI Chatbot on 1 website",
+                    "Up to 50 leads/month",
+                    "Basic CRM integration",
+                    "Email support",
+                    "Monthly reporting",
+                  ],
+                  highlighted: false,
+                },
+                {
+                  name: "Growth",
+                  price: "R9,999",
+                  description: "For growing businesses scaling fast",
+                  features: [
+                    "AI Chatbot on 3 websites",
+                    "Up to 200 leads/month",
+                    "Advanced CRM automation",
+                    "Priority support",
+                    "Weekly reporting",
+                    "Custom landing pages",
+                    "Meta Ads management",
+                  ],
+                  highlighted: true,
+                },
+                {
+                  name: "Scale",
+                  price: "R19,999",
+                  description: "Enterprise-grade automation",
+                  features: [
+                    "Unlimited websites",
+                    "Unlimited leads",
+                    "Full workflow automation",
+                    "Dedicated account manager",
+                    "Real-time reporting",
+                    "Custom AI training",
+                    "White-label options",
+                    "API access",
+                  ],
+                  highlighted: false,
+                },
+              ].map((plan, index) => (
+                <Card
+                  key={index}
+                  className={`relative hover:shadow-xl transition-all animate-in fade-in slide-in-from-bottom-4 ${plan.highlighted ? "border-primary border-4 shadow-lg scale-105" : "border-2"}`}
+                  style={{ animationDelay: `${index * 150}ms` }}
+                >
+                  {plan.highlighted && (
+                    <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-primary text-primary-foreground text-sm font-semibold rounded-full">
+                      Most Popular
+                    </div>
+                  )}
+                  <CardHeader>
+                    <CardTitle className="text-2xl">{plan.name}</CardTitle>
+                    <CardDescription className="text-base">
+                      {plan.description}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-6">
+                    <ul className="space-y-3">
+                      {plan.features.map((feature, i) => (
+                        <li key={i} className="flex items-start gap-3">
+                          <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                          <span className="text-foreground/80">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <Button
+                      onClick={() => setIsBookingOpen(true)}
+                      className="w-full font-semibold"
+                      variant={plan.highlighted ? "default" : "outline"}
+                      size="lg"
+                    >
+                      Get Started <ChevronRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+
+          {/* Web Development Pricing Section */}
+          <div className="mb-20">
+            <h3 className="text-3xl font-bold text-center mb-12 text-primary">
+              Web Development
+            </h3>
+            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              {[
+                {
+                  name: "Landing Page",
+                  price: "R2,999",
+                  description: "Single page website for your business",
+                  features: [
+                    "1 custom landing page",
+                    "Mobile responsive design",
+                    "Contact form integration",
+                    "Fast loading speed",
+                    "2 rounds of revisions",
+                    "1 month free support",
+                  ],
+                  highlighted: false,
+                },
+                {
+                  name: "Business Website",
+                  price: "R7,999",
+                  description: "Multi-page website for your business",
+                  features: [
+                    "Up to 5 custom pages",
+                    "Modern responsive design",
+                    "SEO optimization",
+                    "Contact & booking forms",
+                    "Google Analytics setup",
+                    "3 rounds of revisions",
+                    "3 months free support",
+                  ],
+                  highlighted: true,
+                },
+                {
+                  name: "E-Commerce",
+                  price: "R14,999",
+                  description: "Full online store with payment processing",
+                  features: [
+                    "Up to 50 products",
+                    "Payment gateway integration",
+                    "Shopping cart & checkout",
+                    "Product management system",
+                    "Order tracking",
+                    "Mobile app-like experience",
+                    "Unlimited revisions",
+                    "6 months free support",
+                  ],
+                  highlighted: false,
+                },
+              ].map((plan, index) => (
+                <Card
+                  key={index}
+                  className={`relative hover:shadow-xl transition-all animate-in fade-in slide-in-from-bottom-4 ${plan.highlighted ? "border-primary border-4 shadow-lg scale-105" : "border-2"}`}
+                  style={{ animationDelay: `${index * 150}ms` }}
+                >
+                  {plan.highlighted && (
+                    <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-primary text-primary-foreground text-sm font-semibold rounded-full">
+                      Most Popular
+                    </div>
+                  )}
+                  <CardHeader>
+                    <CardTitle className="text-2xl">{plan.name}</CardTitle>
+                    <CardDescription className="text-base">
+                      {plan.description}
+                    </CardDescription>
+
+                  </CardHeader>
+                  <CardContent className="space-y-6">
+                    <ul className="space-y-3">
+                      {plan.features.map((feature, i) => (
+                        <li key={i} className="flex items-start gap-3">
+                          <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                          <span className="text-foreground/80">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <Button
+                      onClick={() => setIsBookingOpen(true)}
+                      className="w-full font-semibold"
+                      variant={plan.highlighted ? "default" : "outline"}
+                      size="lg"
+                    >
+                      Get Started <ChevronRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+
+          {/* Business Automation Pricing Section */}
+          <div>
+            <h3 className="text-3xl font-bold text-center mb-12 text-primary">
+              Business Automation
+            </h3>
+            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              {[
+                {
+                  name: "Essential",
+                  price: "R3,499",
+                  description: "Automate your basic workflows",
+                  features: [
+                    "Up to 3 automation workflows",
+                    "Email automation",
+                    "Calendar & scheduling",
+                    "Basic data syncing",
+                    "Setup & training included",
+                    "1 month support",
+                  ],
+                  highlighted: false,
+                },
+                {
+                  name: "Professional",
+                  price: "R6,999",
+                  description: "Complete automation for growing teams",
+                  features: [
+                    "Up to 10 automation workflows",
+                    "CRM integration",
+                    "Invoice & payment automation",
+                    "Document generation",
+                    "Slack/Teams integration",
+                    "Custom reporting",
+                    "3 months support",
+                  ],
+                  highlighted: true,
+                },
+                {
+                  name: "Enterprise",
+                  price: "R12,999",
+                  description: "Advanced automation for scale",
+                  features: [
+                    "Unlimited workflows",
+                    "Multi-platform integration",
+                    "AI-powered automation",
+                    "Custom API connections",
+                    "Advanced analytics",
+                    "Dedicated automation specialist",
+                    "Priority support",
+                    "6 months support",
+                  ],
+                  highlighted: false,
+                },
+              ].map((plan, index) => (
+                <Card
+                  key={index}
+                  className={`relative hover:shadow-xl transition-all animate-in fade-in slide-in-from-bottom-4 ${plan.highlighted ? "border-primary border-4 shadow-lg scale-105" : "border-2"}`}
+                  style={{ animationDelay: `${index * 150}ms` }}
+                >
+                  {plan.highlighted && (
+                    <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-primary text-primary-foreground text-sm font-semibold rounded-full">
+                      Most Popular
+                    </div>
+                  )}
+                  <CardHeader>
+                    <CardTitle className="text-2xl">{plan.name}</CardTitle>
+                    <CardDescription className="text-base">
+                      {plan.description}
+                    </CardDescription>
+
+                  </CardHeader>
+                  <CardContent className="space-y-6">
+                    <ul className="space-y-3">
+                      {plan.features.map((feature, i) => (
+                        <li key={i} className="flex items-start gap-3">
+                          <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                          <span className="text-foreground/80">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <Button
+                      onClick={() => setIsBookingOpen(true)}
+                      className="w-full font-semibold"
+                      variant={plan.highlighted ? "default" : "outline"}
+                      size="lg"
+                    >
+                      Get Started <ChevronRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+
+          {/* SMME & Business Compliance Support Pricing Section */}
+          <div className="mt-20">
+            <h3 className="text-3xl font-bold text-center mb-12 text-primary">
+              SMME & Business Support
+            </h3>
+            <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              {[
+                {
+                  name: "Starter",
+                  price: "R4,999",
+                  description: "For new SMMEs setting up legally and digitally",
+                  features: [
+                    "Company registration guidance (CIPC)",
+                    "CSD registration assistance",
+                    "Basic BBBEE guidance",
+                    "Google Business Profile & email setup",
+                    "Contact & WhatsApp integration",
+                    "1 month support via email/WhatsApp",
+                    "Monthly reporting on setup progress",
+                  ],
+                  highlighted: false,
+                },
+                {
+                  name: "Growth",
+                  price: "R9,999",
+                  description:
+                    "For growing SMMEs scaling operations compliantly",
+                  features: [
+                    "Full company registration & CIPC setup",
+                    "CSD registration completed",
+                    "BBBEE verification guidance",
+                    "Tax registration & compliance support (SARS)",
+                    "Workflow & CRM integration",
+                    "Priority support via WhatsApp & email",
+                    "Weekly reporting on progress",
+                    "Branding & marketing setup",
+                  ],
+                  highlighted: true,
+                },
+                {
+                  name: "Scale",
+                  price: "R19,999",
+                  description:
+                    "Enterprise-grade SMME setup with compliance & automation",
+                  features: [
+                    "Complete company registration & advanced CIPC support",
+                    "CSD registration & active supplier management",
+                    "BBBEE verification and score optimization",
+                    "SARS tax registration and compliance guidance",
+                    "Full workflow automation & CRM integration",
+                    "Dedicated account manager",
+                    "Real-time dashboards & reporting",
+                    "Marketing, lead generation & digital presence setup",
+                    "White-label options & API integrations",
+                  ],
+                  highlighted: false,
+                },
+              ].map((plan, index) => (
+                <Card
+                  key={index}
+                  className={`relative hover:shadow-xl transition-all animate-in fade-in slide-in-from-bottom-4 ${
+                    plan.highlighted
+                      ? "border-primary border-4 shadow-lg scale-105"
+                      : "border-2"
+                  }`}
+                  style={{ animationDelay: `${index * 150}ms` }}
+                >
+                  {plan.highlighted && (
+                    <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-primary text-primary-foreground text-sm font-semibold rounded-full">
+                      Most Popular
+                    </div>
+                  )}
+                  <CardHeader>
+                    <CardTitle className="text-2xl">{plan.name}</CardTitle>
+                    <CardDescription className="text-base">
+                      {plan.description}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-6">
+                    <ul className="space-y-3">
+                      {plan.features.map((feature, i) => (
+                        <li key={i} className="flex items-start gap-3">
+                          <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                          <span className="text-foreground/80">{feature}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <Button
+                      onClick={() => setIsBookingOpen(true)}
+                      className="w-full font-semibold"
+                      variant={plan.highlighted ? "default" : "outline"}
+                      size="lg"
+                    >
+                      Get Started <ChevronRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Final CTA */}
       <section className="py-20 px-4 bg-gradient-to-b from-primary/5 to-background">
